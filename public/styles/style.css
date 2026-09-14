@@ -1,0 +1,41 @@
+body{
+    background-color: lightblue;
+}
+
+header{
+    background-color: lightgreen;
+}
+
+section{
+    background-color: lightcoral;
+}
+
+nav{
+    background-color: yellow;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav li ul{
+    display: none;
+}
+
+nav li:hover > ul{
+    display: block;
+}
+
+.cards{
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+}
+
+.cards li{
+    padding: 2px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+}
