@@ -14,6 +14,12 @@ footer {
     background-color: darkgray;
 }
 
+footer ul{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
 nav{
     background-color: yellow;
 }
@@ -40,6 +46,7 @@ nav ul > li:hover > ul{
 
 .cards{
     display: flex;
+    justify-content: center;
     gap: 100px;
 }
 
@@ -48,3 +55,5 @@ nav ul > li:hover > ul{
     border-radius: 10px;
     background-color: lightseagreen;
 }
+
+/* TODO opti le display flex en regroupant dans une grande classe général*/
