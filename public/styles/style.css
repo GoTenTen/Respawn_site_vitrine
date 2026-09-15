@@ -10,26 +10,35 @@ section{
     background-color: lightcoral;
 }
 
+footer {
+    background-color: darkgray;
+}
+
 nav{
     background-color: yellow;
 }
 
-nav ul{
-    list-style: none;
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    /*peut être mettre un margin 0 si d'autres décalages apparaissent*/
+}
+
+nav > ul{
     display: flex;
     gap: 40px;
 }
 
-nav li ul{
+nav ul > li > ul {
     display: none;
 }
 
-nav li:hover > ul{
-    display: block;
+nav ul > li:hover > ul{
+    display: flex;
+    flex-direction: column;
 }
 
 .cards{
-    list-style-type: none;
     display: flex;
     gap: 100px;
 }
