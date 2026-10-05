@@ -10,6 +10,10 @@ section{
     background-color: lightcoral;
 }
 
+address {
+    font-style: normal;
+}
+
 footer {
     background-color: darkgray;
 }
