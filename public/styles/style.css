@@ -33,6 +33,7 @@ ul {
 nav > ul{
     display: flex;
     gap: 40px;
+    padding-left: 40px;
 }
 
 nav ul > li > ul {
@@ -54,6 +55,12 @@ nav ul > li:hover > ul{
     padding: 2px;
     border-radius: 10px;
     background-color: lightseagreen;
+}
+
+.icone_nav{
+    max-width: 100%;
+    max-height: auto;
+    /*Afin que le logo s'adapte à l'écran*/
 }
 
 /* TODO opti le display flex en regroupant dans une grande classe général*/
