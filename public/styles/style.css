@@ -78,14 +78,23 @@ nav ul > li:hover > ul{
     width: 100%;
 }
 
-.cards span{
-    display: inline-block;
-    background-color: yellow;
-    margin-left: 55px;
+/* Pour forcer le positionnement selon l'image*/
+.card-visuel{
+    position: relative;
 }
 
-.cards div{
-    margin-top: -9px; /* Afin de "monter" le tag */
+.card-visuel .tag{
+    position: absolute;
+    bottom: 0; /*pour placer à 0px du "visuel", ce derneir étant l'image*/
+    right: 10px;
+    transform: translateY(35%); /* Pour déscendre le span de 50% de sa hauteur*/
+    background-color: yellow;
+}
+
+.cards.actus h3,
+.cards.actus time {
+    display: flex;
+    justify-content: center;
 }
 /* ------------------------------------------ */
 
