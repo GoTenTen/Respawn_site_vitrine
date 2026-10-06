@@ -1,31 +1,10 @@
+/* ---------------- Général ----------------- */
 body{
     background-color: lightblue;
 }
 
-header{
-    background-color: lightgreen;
-}
-
 section{
     background-color: lightcoral;
-}
-
-address {
-    font-style: normal;
-}
-
-footer {
-    background-color: darkgray;
-}
-
-footer ul{
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-}
-
-nav{
-    background-color: yellow;
 }
 
 ul {
@@ -34,12 +13,31 @@ ul {
     /*peut être mettre un margin 0 si d'autres décalages apparaissent*/
 }
 
+address {
+    font-style: normal;
+}
+/* ------------------------------------------ */
+
+
+/* ----------------- Header ----------------- */
+header{
+    background-color: lightgreen;
+}
+/* ------------------------------------------ */
+
+
+/* ------------------ Nav ------------------- */
+nav{
+    background-color: yellow;
+}
+
 nav > ul{
     display: flex;
     gap: 40px;
     padding-left: 40px;
 }
 
+/* Sous-menus : cachés par défaut, affichés au survol du li parent */
 nav ul > li > ul {
     display: none;
 }
@@ -49,22 +47,60 @@ nav ul > li:hover > ul{
     flex-direction: column;
 }
 
+.icone_nav{
+    max-width: 100%;
+    height: auto;
+    /*Afin que le logo s'adapte à l'écran*/
+}
+/* ------------------------------------------ */
+
+
+/* ----------------- Cards ------------------ */
 .cards{
     display: flex;
-    justify-content: center;
     gap: 100px;
 }
 
-.cards li{
-    padding: 2px;
+.cards li {
+    width: 150px;
+    flex-shrink: 0; /* définit à 0 l'élément n'a pas le droit de rétrécir */
+}
+
+.cards a{
+    display: block;
     border-radius: 10px;
+    text-decoration: none;
     background-color: lightseagreen;
 }
 
-.icone_nav{
-    max-width: 100%;
-    max-height: auto;
-    /*Afin que le logo s'adapte à l'écran*/
+.cards img{
+    display: block;
+    width: 100%;
 }
+
+.cards span{
+    display: inline-block;
+    background-color: yellow;
+    margin-left: 55px;
+}
+
+.cards div{
+    margin-top: -9px; /* Afin de "monter" le tag */
+}
+/* ------------------------------------------ */
+
+
+/* ----------------- Footer ----------------- */
+footer {
+    background-color: darkgray;
+}
+
+footer ul{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+/* ------------------------------------------ */
+
 
 /* TODO opti le display flex en regroupant dans une grande classe général*/
