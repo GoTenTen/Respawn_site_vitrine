@@ -1,10 +1,106 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../fonts/press-start-2p-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+/* ---------------- Variables ---------------- */
+:root {
+    --couleur-fond-body: #0b0f1a;
+    --couleur-fond-section: #1a2236;
+    --couleur-fond-header: #1a2236;
+    --couleur-fond-nav: #1a2236;
+    --couleur-fond-card: #0b0f1a;
+    --couleur-rouge: #e3122b;
+    --couleur-fond-footer: #1a2236;
+    --couleur-texte: #e6ebf5;
+    --couleur-texte-2nd: #9aa4b8;
+    --couleur-lien: #ff3b52;
+    --couleur-survol: #2ec8ff;
+
+    --police-titre: 'Press Start 2P', monospace;
+    --police-texte: 'Inter', Arial, sans-serif;
+
+/*------------- DEBUG COLOR  -------------
+    --couleur-fond-body: lightblue;
+    --couleur-fond-section: lightcoral;
+    --couleur-fond-header: lightgreen;
+    --couleur-fond-nav: yellow;
+    --couleur-fond-card: lightseagreen;
+    --couleur-rouge: yellow;
+    --couleur-fond-footer: darkgray;
+-----------------------------------------*/
+}
+/* ------------------------------------------ */
+
+
 /* ---------------- Général ----------------- */
 body{
-    background-color: lightblue;
+    background-color: var(--couleur-fond-body);
+    color: var(--couleur-texte);
+    font-family: var(--police-texte);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2{
+    font-family: var(--police-titre);
+    color: var(--couleur-survol);
+    line-height: 1.4;
+}
+
+h1{
+    font-size: 1.2rem;
+    color: var(--couleur-rouge);
+}
+
+h2{
+    font-size: 1rem;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Nota bene : pour garder un peu d'espaces sur petits écrans */
 }
 
 section{
-    background-color: lightcoral;
+    background-color: var(--couleur-fond-section);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+a{
+    color: var(--couleur-lien);
+}
+
+a:hover{
+    color: var(--couleur-survol);
 }
 
 ul {
@@ -21,23 +117,38 @@ address {
 
 /* ----------------- Header ----------------- */
 header{
-    background-color: lightgreen;
+    background-color: var(--couleur-fond-header);
+    border-bottom: 3px solid var(--couleur-rouge);
 }
 /* ------------------------------------------ */
 
 
 /* ------------------ Nav ------------------- */
 nav{
-    background-color: yellow;
+    background-color: var(--couleur-fond-nav);
+}
+
+nav a{
+    color: var(--couleur-texte);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--couleur-lien);
+    text-shadow: 0 0 8px var(--couleur-lien);
 }
 
 nav > ul{
     display: flex;
     gap: 40px;
     padding-left: 40px;
+    align-items: center;
 }
 
-/* Sous-menus : cachés par défaut, affichés au survol du li parent */
+nav > ul > li{
+    position: relative;
+}
+
 nav ul > li > ul {
     display: none;
 }
@@ -45,6 +156,12 @@ nav ul > li > ul {
 nav ul > li:hover > ul{
     display: flex;
     flex-direction: column;
+    position: absolute; /* le sous-menu passe par-dessus le contenu au lieu de pousser la barre */
+    background-color: var(--couleur-fond-nav);
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    white-space: nowrap; /* Pour éviter que karting indoor se coupe en deux */
 }
 
 .icone_nav{
@@ -59,6 +176,8 @@ nav ul > li:hover > ul{
 .cards{
     display: flex;
     gap: 100px;
+    overflow-x: auto;
+    padding: 15px 15px 20px;
 }
 
 .cards li {
@@ -70,12 +189,22 @@ nav ul > li:hover > ul{
     display: block;
     border-radius: 10px;
     text-decoration: none;
-    background-color: lightseagreen;
+    background-color: var(--couleur-fond-card);
+    color: var(--couleur-texte);
+    border: 2px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s; /* rend l'apparition de la lueur progressive */
+}
+
+.cards a:hover{
+    border-color: var(--couleur-survol);
+    box-shadow: 0 0 15px var(--couleur-survol); /* la lueur néon derrière les cartes */
+    color: var(--couleur-survol);
 }
 
 .cards img{
     display: block;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Pour forcer le positionnement selon l'image*/
@@ -88,7 +217,12 @@ nav ul > li:hover > ul{
     bottom: 0; /*pour placer à 0px du "visuel", ce derneir étant l'image*/
     right: 10px;
     transform: translateY(35%); /* Pour déscendre le span de 50% de sa hauteur*/
-    background-color: yellow;
+    background-color: var(--couleur-rouge);
+    color: var(--couleur-texte);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
 }
 
 .cards.actus h3,
@@ -96,19 +230,105 @@ nav ul > li:hover > ul{
     display: flex;
     justify-content: center;
 }
+
+.cards time{
+    color: var(--couleur-texte-2nd);
+}
 /* ------------------------------------------ */
 
+/* ----------------- Formulaires ------------------ */
+fieldset{
+    border: 1px solid var(--couleur-texte-2nd);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend{
+    color: var(--couleur-survol);
+    padding: 0 10px; /* espace entre le texte de la légende et le trait du cadre */
+}
+
+
+label{
+    display: block;
+    margin-top: 10px;
+}
+
+input, select{
+    background-color: var(--couleur-fond-body);
+    color: var(--couleur-texte);
+    border: 1px solid var(--couleur-texte-2nd);
+    border-radius: 5px;
+    padding: 8px;
+    font-family: inherit; /* Les champs n'héritent pas de la police du body par défaut */
+}
+
+input:focus, select:focus{
+    outline: none;
+    border-color: var(--couleur-survol); /* Pour changer la couleur du contour au clic */
+}
+
+button{
+    background-color: var(--couleur-rouge);
+    color: var(--couleur-texte);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer; /* Pour que le cursor passe en icone main au survol du bouton */
+    transition: box-shadow 0.2s;
+}
+
+button:hover{
+    box-shadow: 0 0 15px var(--couleur-rouge);
+}
+/* ------------------------------------------ */
+
+/* ----------------- Tableaux ------------------ */
+table{
+    width: 100%;
+    border-collapse: collapse; /* fusionne les bordures des cellules sinon double traits */
+}
+
+th, td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--couleur-texte-2nd);
+}
+
+th{
+    color: var(--couleur-survol);
+}
+
+/* Une ligne sur deux légèrement plus sombre*/
+tbody tr:nth-child(even){
+    background-color: var(--couleur-fond-body);
+}
+/* ------------------------------------------ */
 
 /* ----------------- Footer ----------------- */
 footer {
-    background-color: darkgray;
+    background-color: var(--couleur-fond-footer);
+    color: var(--couleur-texte-2nd);
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid var(--couleur-rouge);
+    font-size: 0.9rem;
 }
 
 footer ul{
     display: flex;
     gap: 100px;
+    flex-wrap: wrap; /*Pour éviter des débordements sur petits écrans ou quoi*/
     justify-content: center;
 }
+
+footer a{
+    color: var(--couleur-texte-2nd); /* les liens restent discrets, le cyan au survol vient déjà de a:hover */
+}
+
 /* ------------------------------------------ */
 
 
