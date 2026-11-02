@@ -1,0 +1,49 @@
+/* ----------------- Formulaires ------------------ */
+fieldset{
+    border: 1px solid var(--couleur-texte-2nd);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend{
+    color: var(--couleur-survol);
+    padding: 0 10px; /* espace entre le texte de la légende et le trait du cadre */
+}
+
+
+label{
+    display: block;
+    margin-top: 10px;
+}
+
+input, select{
+    background-color: var(--couleur-fond-body);
+    color: var(--couleur-texte);
+    border: 1px solid var(--couleur-texte-2nd);
+    border-radius: 5px;
+    padding: 8px;
+    font-family: inherit; /* Les champs n'héritent pas de la police du body par défaut */
+}
+
+input:focus, select:focus{
+    outline: none;
+    border-color: var(--couleur-survol); /* Pour changer la couleur du contour au clic */
+}
+
+button{
+    background-color: var(--couleur-rouge);
+    color: var(--couleur-texte);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer; /* Pour que le cursor passe en icone main au survol du bouton */
+    transition: box-shadow 0.2s;
+}
+
+button:hover{
+    box-shadow: 0 0 15px var(--couleur-rouge);
+}
+/* ------------------------------------------ */

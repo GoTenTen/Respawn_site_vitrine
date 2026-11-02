@@ -141,7 +141,7 @@ nav a:hover{
 nav > ul{
     display: flex;
     gap: 40px;
-    padding-left: 40px;
+    padding-left: 0px;
     align-items: center;
 }
 
@@ -165,9 +165,9 @@ nav ul > li:hover > ul{
 }
 
 .icone_nav{
-    max-width: 100%;
-    height: auto;
-    /*Afin que le logo s'adapte à l'écran*/
+    height: 50px;
+    width: auto;
+    display: block;
 }
 /* ------------------------------------------ */
 
@@ -225,6 +225,16 @@ nav ul > li:hover > ul{
     font-weight: 700;
 }
 
+/* Couleurs temporaire*/
+.tag.tournoi{ background-color: var(--couleur-rouge); }
+.tag.gaming { background-color: var(--couleur-rouge); }
+.tag.collab { background-color: #9b5cff; }
+.tag.event  { background-color: #ff8a00; }
+.tag.food   { background-color: #2bd67b; }
+.tag.karting{ background-color: #ffd400; color: var(--couleur-fond-body); }
+.tag.infos  { background-color: var(--couleur-texte-2nd); color: var(--couleur-fond-body); }
+.tag.cheater{ background-color: #ff3bd4; }
+
 .cards.actus h3,
 .cards.actus time {
     display: flex;
@@ -233,56 +243,6 @@ nav ul > li:hover > ul{
 
 .cards time{
     color: var(--couleur-texte-2nd);
-}
-/* ------------------------------------------ */
-
-/* ----------------- Formulaires ------------------ */
-fieldset{
-    border: 1px solid var(--couleur-texte-2nd);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-legend{
-    color: var(--couleur-survol);
-    padding: 0 10px; /* espace entre le texte de la légende et le trait du cadre */
-}
-
-
-label{
-    display: block;
-    margin-top: 10px;
-}
-
-input, select{
-    background-color: var(--couleur-fond-body);
-    color: var(--couleur-texte);
-    border: 1px solid var(--couleur-texte-2nd);
-    border-radius: 5px;
-    padding: 8px;
-    font-family: inherit; /* Les champs n'héritent pas de la police du body par défaut */
-}
-
-input:focus, select:focus{
-    outline: none;
-    border-color: var(--couleur-survol); /* Pour changer la couleur du contour au clic */
-}
-
-button{
-    background-color: var(--couleur-rouge);
-    color: var(--couleur-texte);
-    border: none;
-    border-radius: 5px;
-    padding: 12px 30px;
-    font-family: inherit;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer; /* Pour que le cursor passe en icone main au survol du bouton */
-    transition: box-shadow 0.2s;
-}
-
-button:hover{
-    box-shadow: 0 0 15px var(--couleur-rouge);
 }
 /* ------------------------------------------ */
 

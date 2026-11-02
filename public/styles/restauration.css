@@ -1,0 +1,27 @@
+.food-cards > li{
+    width: 200px;
+}
+
+.food-cards h3,
+.food-cards p{
+    padding: 0 12px;
+    text-align: center;
+}
+
+.food-cards h3{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.food-cards h3 + p{
+    font-size: 0.85rem;
+    color: var(--couleur-texte-2nd);
+    margin-top: 2px;
+}
+
+.food-cards p:last-child{
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--couleur-lien);
+    padding-bottom: 12px;
+}

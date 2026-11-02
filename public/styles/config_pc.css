@@ -1,0 +1,41 @@
+.pc-cards li{
+    width: 220px;
+}
+
+.pc-cards h3,
+.pc-cards p,
+.pc-cards ul{
+    padding: 0 10px;
+}
+
+.pc-cards h3{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.pc-cards h3 + p{
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--couleur-texte-2nd);
+    margin-top: 2px;
+}
+
+.pc-cards ul li{
+    font-size: 0.85rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--couleur-fond-section);
+}
+
+/*Pour enlever le trait après le dernier élément */
+.pc-cards ul li:last-child{
+    border-bottom: none;
+}
+
+.pc-cards p:last-child{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--couleur-lien);
+    padding-bottom: 12px; /* évite qu'il colle au bas de la card */
+}
