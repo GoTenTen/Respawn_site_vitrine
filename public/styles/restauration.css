@@ -25,3 +25,21 @@
     color: var(--couleur-lien);
     padding-bottom: 12px;
 }
+
+.infos-food li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(154, 164, 184, 0.2);
+}
+
+.infos-food li:last-child{
+    border-bottom: none;
+}
+
+/* ::before ajoute un ">" devant chaque ligne : curseur de menu façon jeu rétro, sans toucher au HTML */
+.infos-food li::before{
+    content: ">";
+    font-family: var(--police-titre);
+    font-size: 0.7rem;
+    color: var(--couleur-rouge);
+    margin-right: 12px;
+}

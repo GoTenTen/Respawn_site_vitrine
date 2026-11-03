@@ -1,0 +1,37 @@
+.packs > li{
+    width: 200px;
+}
+
+.packs h3,
+.packs p{
+    padding: 0 12px;
+    text-align: center;
+}
+
+.packs h3{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+/* le contenu du pack, juste sous le titre, en info secondaire */
+.packs h3 + p{
+    font-size: 0.85rem;
+    color: var(--couleur-texte-2nd);
+    margin-top: 2px;
+}
+
+/* le prix du pack, mis en avant comme sur les autres cards */
+.packs p:last-child{
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--couleur-lien);
+    padding-bottom: 12px;
+}
+
+/* l'ancien prix : plus petit et grisé, pour que l'œil aille sur le nouveau et voie l'économie */
+.packs del{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--couleur-texte-2nd);
+    margin-right: 6px;
+}
