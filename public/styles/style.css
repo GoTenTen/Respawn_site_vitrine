@@ -59,12 +59,25 @@
 
 
 /* ---------------- Général ----------------- */
+
+@keyframes defilement-points{
+    from{ background-position: 0 0, 12px 12px; }
+    to{   background-position: 24px 24px, 36px 36px; }
+}
+
 body{
     background-color: var(--couleur-fond-body);
     color: var(--couleur-texte);
     font-family: var(--police-texte);
     margin: 0;
     line-height: 1.6;
+    background-image:
+        radial-gradient(rgba(154, 164, 184, 0.15) 1px, transparent 1px),
+        radial-gradient(rgba(154, 164, 184, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    background-attachment: fixed;
+    animation: defilement-points 4s linear infinite;
 }
 
 h1, h2{
@@ -141,7 +154,8 @@ nav a:hover{
 nav > ul{
     display: flex;
     gap: 40px;
-    padding-left: 0px;
+    margin: 0;
+    padding: 15px 20px;
     align-items: center;
 }
 
