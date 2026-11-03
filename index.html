@@ -41,30 +41,33 @@
             </p>
             <!-- TODO : 2-3 photos (poste PC, repas, groupe karting) -->
         </section>
-        <section>
-            <h2>Viens jouer quand tu veux</h2>
-            <p>
-                Chez Respawn, on met à ta disposition de vraies machines de guerre, taillées pour tes besoins. Si tu veux les PC les plus performants, avec du matériel plus puissant, pense à réserver ta machine au préalable !
-            </p>
-            <!-- TODO : bouton/photo vers réservation-tarifs + un autre vers config PC -->
-        </section>
-        <section>
-            <h2>Entre deux games, joues dans la vraie vie</h2>
-            <p>
-                Si ta session ne se passe pas comme prévu, ou si tu veux simplement changer de monde, rejoins d'autres pilotes dans des courses de karting effrénées. Tu pourrais même repartir avec un trophée !
-            </p>
-        </section>
-        <section>
-            <h2>Ou fais le plein d'énergie</h2>
-            <p>
-                Découvre les distributeurs et les repas à la carte, parfois compris dans la formule, disponibles sur place ou livrés directement à ta station de jeu si tu es trop focus dans tes games.
-            </p>
-        </section>
+        <div class="services">
+            <section>
+                <h2>Viens jouer quand tu veux</h2>
+                <p>
+                    Chez Respawn, on met à ta disposition de vraies machines de guerre, taillées pour tes besoins. Si tu veux les PC les plus performants, avec du matériel plus puissant, pense à réserver ta machine au préalable !
+                </p>
+                <a href="pages/config_pc.html" class="bouton">Nos PCs</a>
+            </section>
+            <section>
+                <h2>Entre deux games, joues dans la vraie vie</h2>
+                <p>
+                    Si ta session ne se passe pas comme prévu, ou si tu veux simplement changer de monde, rejoins d'autres pilotes dans des courses de karting effrénées. Tu pourrais même repartir avec un trophée !
+                </p>
+                <a href="pages/karting.html" class="bouton">Le karting</a>
+            </section>
+            <section>
+                <h2>Ou fais le plein d'énergie</h2>
+                <p>
+                    Découvre les distributeurs et les repas à la carte, parfois compris dans la formule, disponibles sur place ou livrés directement à ta station de jeu si tu es trop focus dans tes games.
+                </p>
+                <a href="pages/restauration.html" class="bouton">La carte</a>
+            </section>
+        </div>
         <section>
             <h2>Actualité des respawners</h2>
             <ul class="cards actus">
                 <li><a href="pages/actus.html"> <!-- Redirection temporaire -->
-                        <!-- La div enveloppe l'image ET le tag, car sinon le tag aurait pu bouger en et se retrouver en plein milieu de l'image selon la taille de cette dernière -->
                         <div class="card-visuel">
                             <img src="public/images/respawn_icone_red.svg" alt="placeholder">
                             <span class="tag tournoi">TOURNOI</span>
@@ -145,6 +148,7 @@
                 <li>Contactez-nous : <a href="mailto:contact@respawn.example">contact@respawn.example</a></li>
                 <li>Appelez-nous : <a href="tel:+33639980000">06 39 98 00 00</a></li>
                 <li>42 rue du gros gamer, 34042 MontpellierGaming</li>
+                <li><p class="mention-ia">Certains contenus de ce site ont été réalisés avec l'aide d'une intelligence artificielle.</p></li>
             </ul>
         </address>
     </footer>

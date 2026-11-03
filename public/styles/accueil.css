@@ -18,3 +18,31 @@
 .bouton{
     text-decoration: none;
 }
+
+
+/* compteur CSS : numérote les sections tout seul, sans rien écrire dans le HTML */
+.services{
+    counter-reset: niveau;
+}
+
+.services section{
+    counter-increment: niveau;
+    display: grid;
+    grid-template-columns: 120px 1fr; /* colonne fixe pour le numéro */
+    column-gap: 20px;
+}
+
+/* ::before crée le numéro "01", "02"… grid-row: span 3 le fait tenir sur toute la hauteur (h2 + p + bouton) */
+.services section::before{
+    content: "0" counter(niveau);
+    grid-row: span 3;
+    font-family: var(--police-titre);
+    font-size: 3rem;
+    color: var(--couleur-rouge);
+    align-self: center;
+}
+
+.services .bouton{
+
+    justify-self: start; /* le bouton garde sa taille au lieu de s'étirer dans la colonne */
+}

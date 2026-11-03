@@ -1,4 +1,4 @@
-.pc-cards li{
+.pc-cards > li{
     width: 220px;
 }
 

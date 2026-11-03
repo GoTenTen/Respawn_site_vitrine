@@ -194,7 +194,7 @@ nav ul > li:hover > ul{
     padding: 15px 15px 20px;
 }
 
-.cards li {
+.cards > li {
     width: 150px;
     flex-shrink: 0; /* définit à 0 l'élément n'a pas le droit de rétrécir */
 }
