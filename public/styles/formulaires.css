@@ -22,7 +22,9 @@ input, select{
     border: 1px solid var(--couleur-texte-2nd);
     border-radius: 5px;
     padding: 8px;
-    font-family: inherit; /* Les champs n'héritent pas de la police du body par défaut */
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input:focus, select:focus{
@@ -41,9 +43,17 @@ button{
     text-transform: uppercase;
     cursor: pointer; /* Pour que le cursor passe en icone main au survol du bouton */
     transition: box-shadow 0.2s;
+    display: block;
+    margin: 20px auto 0;
 }
 
 button:hover{
     box-shadow: 0 0 15px var(--couleur-rouge);
 }
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* ------------------------------------------ */
