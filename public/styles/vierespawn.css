@@ -1,0 +1,32 @@
+/* Trophée pixel art dessiné en SVG directement dans le CSS (data URI) : aucun fichier image à gérer.
+    Chaque <rect> est un "pixel" ; fill-opacity très bas pour qu'il reste un simple décor de fond.
+   Piège : dans un data URI, le # des couleurs doit être écrit %23 sinon le navigateur coupe l'URL */
+#tournois{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 15' shape-rendering='crispEdges' fill='%239aa4b8' fill-opacity='0.15'%3E%3Crect x='3' y='1' width='10' height='5'/%3E%3Crect x='4' y='6' width='8' height='1'/%3E%3Crect x='5' y='7' width='6' height='1'/%3E%3Crect x='7' y='8' width='2' height='3'/%3E%3Crect x='5' y='11' width='6' height='1'/%3E%3Crect x='4' y='12' width='8' height='2'/%3E%3Crect x='1' y='2' width='2' height='1'/%3E%3Crect x='1' y='3' width='1' height='2'/%3E%3Crect x='1' y='5' width='2' height='1'/%3E%3Crect x='13' y='2' width='2' height='1'/%3E%3Crect x='14' y='3' width='1' height='2'/%3E%3Crect x='13' y='5' width='2' height='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 40px center;
+    background-size: 150px;
+}
+
+/* le texte s'arrête avant le trophée pour ne pas passer dessus */
+#tournois ul{
+    max-width: 75%;
+}
+
+/* un trait discret entre chaque tournoi : effet "programme" */
+#tournois li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(154, 164, 184, 0.2);
+}
+
+#tournois li:last-child{
+    border-bottom: none;
+}
+
+/* inline-block + largeur mini : toutes les dates ont la même largeur, donc les textes s'alignent */
+#tournois time{
+    display: inline-block;
+    min-width: 110px;
+    font-weight: 700;
+    color: var(--couleur-lien);
+}
